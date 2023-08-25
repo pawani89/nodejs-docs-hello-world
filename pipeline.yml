@@ -2,7 +2,7 @@ trigger:
   - main
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: "nodejs-hello-world-CI"
+  azureSubscription: "GitHubconnection1"
 
   # Web app name
   webAppName: "helloworld-nodejs-13004"
