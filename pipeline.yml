@@ -16,7 +16,7 @@ variables:
 stages:     
   - stage: Build
     pool:
-     name: demo-selfhosted
+     name: demo-agentpool
      vmImage: $(vmImageName)
     displayName: Build stage
     jobs:
@@ -54,7 +54,7 @@ stages:
         displayName: Deploy
         environment: $(environmentName)
         pool:
-          name: demo-selfhosted
+          name: demo-agentpool
           vmImage: $(vmImageName)
         strategy:
           runOnce:
