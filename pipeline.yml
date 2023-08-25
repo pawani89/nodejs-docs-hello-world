@@ -15,14 +15,12 @@ variables:
 
 stages:     
   - stage: Build
-    pool:
-     name: demo-agentpool
-     vmImage: $(vmImageName)
     displayName: Build stage
     jobs:
       - job: Build
         displayName: Build
         pool:
+          name: demo-agentpool
           vmImage: $(vmImageName)
         steps:
           - task: NodeTool@0
